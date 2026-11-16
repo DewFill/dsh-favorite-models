@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
 
+[![npm](https://img.shields.io/npm/v/dsh-favorite-models)](https://www.npmjs.com/package/dsh-favorite-models)
+
 [English](README.md) | Русский | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
 Плагин для веб-интерфейса DeepSeek Harness: звёзды в штатном выборе модели.
@@ -54,6 +56,14 @@ git clone https://github.com/DewFill/dsh-favorite-models.git
 Откройте **Plugins → Installed → Add plugin** и выберите папку
 `dsh-favorite-models`. Плагин активируется сразу; если окно уже было открыто и
 звёзды не появились — перезагрузите страницу.
+
+### Вариант 3 — пакет из npm
+
+Откройте **Plugins → Installed → Add plugin**, введите `dsh-favorite-models`,
+проверьте превью и подтвердите установку. Пакет опубликован в npm с provenance,
+поэтому установленный код прослеживается до этого репозитория.
+
+Обновления приходят через **Plugins → Installed → Update** на карточке плагина.
 
 ## Использование
 

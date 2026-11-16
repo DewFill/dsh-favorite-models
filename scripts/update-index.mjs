@@ -19,6 +19,12 @@ if (plugin === undefined) {
   throw new Error(`index.json does not list "${pkg.name}"`);
 }
 
+const existing = plugin.versions.find((candidate) => candidate.version === version);
+if (existing !== undefined && existing.source !== undefined && existing.source.type === 'npm') {
+  console.log(`index.json already points at the npm release ${version}`);
+  process.exit(0);
+}
+
 const engines = {};
 if (pkg.engines !== undefined && pkg.engines.dsh !== undefined) {
   engines.dsh = pkg.engines.dsh;

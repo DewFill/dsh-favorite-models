@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
 
+[![npm](https://img.shields.io/npm/v/dsh-favorite-models)](https://www.npmjs.com/package/dsh-favorite-models)
+
 [English](README.md) | [Русский](README.ru.md) | [中文](README.zh.md) | 日本語 | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
 DeepSeek Harness の Web UI に星を追加するプラグインです。モデル一覧で任意のモデルに
@@ -53,6 +55,14 @@ git clone https://github.com/DewFill/dsh-favorite-models.git
 **Plugins → Installed → Add plugin** を開き、`dsh-favorite-models` フォルダーを
 選択します。プラグインはすぐに有効になります。ウィンドウを既に開いていて星が表示
 されない場合は、ページを再読み込みしてください。
+
+### 方法 3 — npm パッケージ
+
+**Plugins → Installed → Add plugin** を開き、`dsh-favorite-models` を入力して
+プレビューを確認し、インストールを確定します。パッケージは provenance 付きで npm
+に公開されているため、インストールされたコードはこのリポジトリまで追跡できます。
+
+更新はプラグインカードの **Plugins → Installed → Update** から行います。
 
 ## 使い方
 

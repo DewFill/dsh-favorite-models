@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
+[![npm](https://img.shields.io/npm/v/dsh-favorite-models)](https://www.npmjs.com/package/dsh-favorite-models)
 
 English | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
@@ -53,6 +54,14 @@ git clone https://github.com/DewFill/dsh-favorite-models.git
 Open **Plugins → Installed → Add plugin** and pick the `dsh-favorite-models`
 folder. The plugin activates immediately; if the window was already open and no
 stars appear, reload the page.
+
+### Option 3 — npm package
+
+Open **Plugins → Installed → Add plugin**, enter `dsh-favorite-models`, review
+the preview and confirm. The package is published to the npm registry with
+provenance, so the installed code is traceable to this repository.
+
+Updates arrive through **Plugins → Installed → Update** on the plugin card.
 
 ## Usage
 

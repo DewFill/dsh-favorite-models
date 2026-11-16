@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
 
+[![npm](https://img.shields.io/npm/v/dsh-favorite-models)](https://www.npmjs.com/package/dsh-favorite-models)
+
 [English](README.md) | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | Português
 
 Um plugin para a interface web do DeepSeek Harness: adiciona estrelas ao seletor
@@ -54,6 +56,14 @@ git clone https://github.com/DewFill/dsh-favorite-models.git
 Abra **Plugins → Installed → Add plugin** e escolha a pasta
 `dsh-favorite-models`. O plugin ativa-se de imediato; se a janela já estava aberta
 e as estrelas não aparecerem, recarregue a página.
+
+### Opção 3 — pacote do npm
+
+Abra **Plugins → Installed → Add plugin**, introduza `dsh-favorite-models`, veja a
+pré-visualização e confirme. O pacote está publicado no npm com provenance, pelo
+que o código instalado é rastreável até este repositório.
+
+As atualizações chegam por **Plugins → Installed → Update** no cartão do plugin.
 
 ## Utilização
 

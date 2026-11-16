@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
 
+[![npm](https://img.shields.io/npm/v/dsh-favorite-models)](https://www.npmjs.com/package/dsh-favorite-models)
+
 [English](README.md) | [Русский](README.ru.md) | 中文 | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
 为 DeepSeek Harness 网界面添加星标：在模型的列表里给任意模型加星，选择器的
@@ -50,6 +52,13 @@ git clone https://github.com/DewFill/dsh-favorite-models.git
 
 打开 **Plugins → Installed → Add plugin**，选择 `dsh-favorite-models` 文件夹。
 插件会立即生效；如果窗口本来已经打开且没有出现星标，刷新页面即可。
+
+### 方式三 —— npm 包
+
+打开 **Plugins → Installed → Add plugin**，输入 `dsh-favorite-models`，查看预览并
+确认安装。该包已带 provenance 发布到 npm，安装的代码可追溯到此仓库。
+
+更新通过插件卡片上的 **Plugins → Installed → Update** 完成。
 
 ## 使用
 
