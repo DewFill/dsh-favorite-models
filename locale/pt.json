@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Modelos favoritos",
-    "description": "Marque com uma estrela qualquer modelo no menu do compositor e escolha-os no bloco Favoritos. Os modelos permanecem nos grupos dos respetivos fornecedores.",
+    "description": "Favoritos para o menu de modelos do DeepSeek Harness: os modelos a que mais volta, reunidos num só lugar.",
     "detail": "docs/DETAIL.pt.md"
   }
 }

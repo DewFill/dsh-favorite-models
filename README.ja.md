@@ -7,9 +7,7 @@
 
 [English](README.md) | [Русский](README.ru.md) | [中文](README.zh.md) | 日本語 | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
-DeepSeek Harness の Web UI に星を追加するプラグインです。モデル一覧で任意のモデルに
-星を付けると、セレクターのルートメニューに「お気に入り」ブロックが現れ、ワンクリックで
-そのモデルに切り替えられます。モデル自体はプロバイダーのグループ内に残ります。
+DeepSeek Harness のモデルメニューのお気に入り — よく使うモデルを一か所に。
 
 | 星付きのモデル一覧 | 「お気に入り」ブロック |
 | --- | --- |

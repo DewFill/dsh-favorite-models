@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Favoriten",
-    "description": "Jedes Modell im Modellmenü mit einem Stern markieren und markierte Modelle im Favoritenblock auswählen. Die Modelle bleiben in ihren Anbietergruppen.",
+    "description": "Favoriten für das Modellmenü von DeepSeek Harness — die Modelle, zu denen Sie am häufigsten zurückkehren, an einem Ort.",
     "detail": "docs/DETAIL.de.md"
   }
 }

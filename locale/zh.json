@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "收藏的模型",
-    "description": "在撰写器的模型菜单中为任意模型加星标，并在“收藏”区块中直接选取。模型仍保留在其服务商分组中。",
+    "description": "DeepSeek Harness 模型菜单的收藏：您最常使用的模型，集中在一处。",
     "detail": "docs/DETAIL.zh.md"
   }
 }

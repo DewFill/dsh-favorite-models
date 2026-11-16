@@ -1,7 +1,7 @@
 {
   "name": "dsh-favorite-models",
   "version": "1.0.1",
-  "description": "Star models in the DeepSeek Harness composer model menu and pick them from a Favourites block.",
+  "description": "Favourites for the DeepSeek Harness model menu — the models you reach for most, gathered in one place.",
   "keywords": [
     "dsh",
     "deepseek-harness",

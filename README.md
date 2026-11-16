@@ -6,9 +6,7 @@
 
 English | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
-A plugin for the DeepSeek Harness web UI that adds stars to the built-in model
-picker: star any model, and a **Favourites** block appears in the selector's root
-menu, where that model is one click away. Models stay in their provider groups.
+Favourites for the DeepSeek Harness model menu — the models you reach for most, gathered in one place.
 
 | Model list with stars | The Favourites block |
 | --- | --- |

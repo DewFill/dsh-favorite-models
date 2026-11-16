@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Modèles favoris",
-    "description": "Marquez d’une étoile n’importe quel modèle du menu du compositeur et choisissez-les depuis le bloc Favoris. Les modèles restent dans leurs groupes de fournisseurs.",
+    "description": "Favoris pour le menu des modèles de DeepSeek Harness : les modèles vers lesquels vous revenez le plus, réunis au même endroit.",
     "detail": "docs/DETAIL.fr.md"
   }
 }

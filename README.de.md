@@ -7,10 +7,7 @@
 
 [English](README.md) | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | Deutsch | [Português](README.pt.md)
 
-Ein Plugin für die Web-Oberfläche von DeepSeek Harness: Es ergänzt Sterne in der
-integrierten Modellauswahl. Markiert ein beliebiges Modell, und im Wurzelmenü des
-Selektors erscheint ein Block **Favoriten**, aus dem das Modell mit einem Klick
-gewählt wird. Die Modelle bleiben in ihren Anbietergruppen.
+Favoriten für das Modellmenü von DeepSeek Harness — die Modelle, zu denen Sie am häufigsten zurückkehren, an einem Ort.
 
 | Modellliste mit Sternen | Der Favoriten-Block |
 | --- | --- |

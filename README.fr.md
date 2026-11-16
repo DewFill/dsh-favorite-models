@@ -7,10 +7,7 @@
 
 [English](README.md) | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | Français | [Deutsch](README.de.md) | [Português](README.pt.md)
 
-Un plugin pour l’interface web de DeepSeek Harness : il ajoute des étoiles au
-sélecteur de modèles intégré. Marquez n’importe quel modèle, et un bloc
-**Favoris** apparaît dans le menu racine du sélecteur, d’où ce modèle se choisit
-en un clic. Les modèles restent dans leurs groupes de fournisseurs.
+Favoris pour le menu des modèles de DeepSeek Harness : les modèles vers lesquels vous revenez le plus, réunis au même endroit.
 
 | Liste des modèles avec les étoiles | Le bloc Favoris |
 | --- | --- |

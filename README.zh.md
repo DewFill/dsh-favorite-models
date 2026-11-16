@@ -7,9 +7,7 @@
 
 [English](README.md) | [Русский](README.ru.md) | 中文 | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
-为 DeepSeek Harness 网界面添加星标：在模型的列表里给任意模型加星，选择器的
-根菜单中会出现「收藏」区块，一键即可切换到该模型。模型仍保留在各自的服务商
-分组里。
+DeepSeek Harness 模型菜单的收藏：您最常使用的模型，集中在一处。
 
 | 带星标的模型列表 | 「收藏」区块 |
 | --- | --- |
