@@ -2,6 +2,6 @@
   "meta": {
     "title": "Modèles favoris",
     "description": "Marquez d’une étoile n’importe quel modèle du menu du compositeur et choisissez-les depuis le bloc Favoris. Les modèles restent dans leurs groupes de fournisseurs.",
-    "detail": "docs/DETAIL.md"
+    "detail": "docs/DETAIL.fr.md"
   }
 }

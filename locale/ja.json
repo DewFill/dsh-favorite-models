@@ -2,6 +2,6 @@
   "meta": {
     "title": "お気に入りのモデル",
     "description": "コンポーザーのモデルメニューで各モデルに星を付け、お気に入りブロックから選べます。モデルはプロバイダーグループ内の元の位置に残ります。",
-    "detail": "docs/DETAIL.md"
+    "detail": "docs/DETAIL.ja.md"
   }
 }

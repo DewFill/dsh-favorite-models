@@ -1,53 +1,44 @@
-# Избранные модели
+# Favourite models
 
-Звёзды у моделей в селекторе модели (композер → «DeepSeek-V4.1-Flash») и отдельный
-список «Избранные», который дублирует отмеченные модели в корневом меню этого
-селектора.
+Stars in the model picker of the DeepSeek Harness web UI, plus a Favourites
+block that duplicates the starred models in the selector's root menu.
 
-## Как пользоваться
+## Usage
 
-1. Откройте меню модели в композере и перейдите в пункт «Модель».
-2. Нажмите звёздочку сразу после названия нужной модели — она станет жёлтой.
-3. Откройте меню модели ещё раз: под строками «Модель» и «Рассуждения» появится
-   блок «Избранные» с отмеченными моделями и их провайдерами. Клик по строке
-   переключает на эту модель и закрывает меню.
-4. Повторный клик по звезде убирает модель из избранного.
+1. Open the model menu in the composer and go to **Model**.
+2. Click the star right after a model name — it turns yellow.
+3. Open the model menu again: under the **Model** and **Effort** rows a
+   **Favourites** block lists the starred models with their providers. Clicking
+   a row switches to that model and closes the menu.
+4. Clicking the star again removes the model from favourites.
 
-Модели в списке провайдеров остаются на своих местах: избранное — это дубль, а не
-перестановка.
+Models stay where they are in their provider groups: favourites are a duplicate,
+not a reorder.
 
-## Как устроено
+## How it works
 
-Плагин не копирует и не заменяет интерфейс DSH. Он использует два документированных
-слота штатного селектора (пакет `@deepseek-ai/dsh-client-ui-model-selection`):
+The plugin does not copy or replace the DSH interface. It uses two documented
+slots of the shipped model selector
+(`@deepseek-ai/dsh-client-ui-model-selection`):
 
-- `conversation.input.model.label` — дописывает звезду после названия модели в
-  каждой строке списка (в триггере и в значении корневого меню звезды нет);
-- `conversation.input.model.options` — добавляет блок «Избранные» в корневое меню,
-  рядом со строками других плагинов (Agent Teams, Codex subscription).
+- `conversation.input.model.label` — appends the star to the model name in every
+  list row (the collapsed trigger and the root-menu **Model** row have no star);
+- `conversation.input.model.options` — adds the Favourites block to the root
+  menu, next to the rows contributed by other plugins.
 
-Избранное хранится в `localStorage` браузера под ключом `dsh.favorite-models.v1`,
-поэтому оно общее для всех сессий и не синхронизируется между браузерами.
-Список упорядочен по времени добавления: новые избранные идут первыми.
+Favourites are stored in the browser's `localStorage` under
+`dsh.favorite-models.v1` and are shared by all sessions.
 
-## Языки
+## Languages
 
-Строки плагина зарегистрированы в сервисе локали DSH для всех штатных языков
-интерфейса: английский, русский, китайский, японский, испанский, французский,
-немецкий и португальский. Переключение языка в настройках DSH применяется сразу,
-без перезагрузки: заголовок блока, подписи звёзд и текст ошибки переключаются
-вместе с остальным интерфейсом. Для языков, которых нет в списке, используется
-английский текст.
+Strings and this page follow the DSH UI language: English, Russian, Chinese,
+Japanese, Spanish, French, German and Portuguese. Other languages fall back to
+English.
 
-## Ограничения
+## Limitations
 
-- Блок «Избранные» стоит после строк «Модель» и «Рассуждения»: слот разрешает
-  добавлять пункты только после них. Вставить свою группу в начало списка моделей
-  можно лишь подменив штатный селектор целиком — от этого варианта сознательно
-  отказались, чтобы не копировать дизайн DSH.
-- Звезда ставится в строке модели; в свёрнутом триггере и в строке «Модель»
-  корневого меню её нет.
-- Если штатный пакет селектора переименует слоты или сменит их контракт, звезда и
-  блок избранного перестанут отображаться; остальной селектор продолжит работать
-  как обычно.
-- Избранное хранится локально в браузере и не входит в сессии или экспорт.
+- The Favourites block appears after the **Model** and **Effort** rows: the slot
+  only allows adding items there. A group at the very top of the model list would
+  require replacing the shipped selector.
+- The star exists in the model rows only.
+- Favourites do not sync between browsers or devices.
