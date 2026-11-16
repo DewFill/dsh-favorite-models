@@ -24,27 +24,41 @@ jobs:
         id: version
         run: echo "value=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
 
-      - name: Check whether this version is already on npm
-        id: check
+      - name: Check whether this version is already live on npm
+        id: live
         run: |
           if npm view "dsh-favorite-models@${{ steps.version.outputs.value }}" version >/dev/null 2>&1; then
-            echo "published=true" >> "$GITHUB_OUTPUT"
+            echo "value=true" >> "$GITHUB_OUTPUT"
           else
-            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "value=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Publish to npm
-        if: steps.check.outputs.published == 'false'
+        if: steps.live.outputs.value == 'false'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Wait for the version to appear on npm
+        if: steps.live.outputs.value == 'false'
+        id: confirm
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if npm view "dsh-favorite-models@${{ steps.version.outputs.value }}" version >/dev/null 2>&1; then
+              echo "value=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "value=false" >> "$GITHUB_OUTPUT"
+          echo "::warning::The version is staged for review. Approve it in the npm staged-publishing queue, then run this workflow again to update the plugin index."
+
       - name: Point the plugin index at the npm release
-        if: steps.check.outputs.published == 'false'
+        if: steps.live.outputs.value == 'true' || steps.confirm.outputs.value == 'true'
         run: node scripts/update-index.mjs "${{ steps.version.outputs.value }}"
 
       - name: Commit the updated index
-        if: steps.check.outputs.published == 'false'
+        if: steps.live.outputs.value == 'true' || steps.confirm.outputs.value == 'true'
         run: |
           if git diff --quiet -- index.json; then
             echo "index.json is already current"
