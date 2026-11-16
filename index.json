@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DewFill DSH plugins",
+    "ru": "Плагины DSH от DewFill"
+  },
+  "description": {
+    "en": "Community plugins for DeepSeek Harness.",
+    "ru": "Небольшие плагины для DeepSeek Harness."
+  },
+  "plugins": [
+    {
+      "name": "dsh-favorite-models",
+      "title": {
+        "en": "Favourite models",
+        "ru": "Избранные модели"
+      },
+      "description": {
+        "en": "Star models in the composer model menu and pick them from a Favourites block. Models stay in their provider groups.",
+        "ru": "Звезда у каждой модели в меню выбора и блок «Избранные» с продублированными моделями. Сами модели остаются в своих группах провайдеров."
+      },
+      "icon": "https://raw.githubusercontent.com/DewFill/dsh-favorite-models/main/icon.svg",
+      "author": "Artemy Fedorchenko",
+      "homepage": "https://github.com/DewFill/dsh-favorite-models",
+      "repository": {
+        "url": "https://github.com/DewFill/dsh-favorite-models"
+      },
+      "metadata": {
+        "keywords": [
+          "models",
+          "favorites",
+          "ui",
+          "localization"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1763301600,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/DewFill/dsh-favorite-models.git",
+            "commit": "32a6310b350a9c4604eb1e8b8f95fd62aa8d8504"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}
