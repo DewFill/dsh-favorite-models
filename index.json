@@ -36,11 +36,9 @@
       "versions": [
         {
           "version": "1.0.0",
-          "publishTimestamp": 1794836547,
+          "publishTimestamp": 1794838021,
           "source": {
-            "type": "git",
-            "url": "https://github.com/DewFill/dsh-favorite-models.git",
-            "commit": "32a6310b350a9c4604eb1e8b8f95fd62aa8d8504"
+            "type": "npm"
           },
           "engines": {
             "dsh": ">=0.2.2-rc.3"
