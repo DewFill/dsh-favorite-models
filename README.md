@@ -1,140 +1,134 @@
-# Избранные модели для DeepSeek Harness
+# Favourite models for DeepSeek Harness
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/dsh-%E2%89%A50.2.2--rc.3-2f6feb)](https://github.com/deepseek-ai/deepseek-harness)
 
-Плагин добавляет звёзды в штатный выбор модели в веб-интерфейсе DeepSeek Harness:
-отмечайте модели звёздочкой, а в корневом меню селектора появляется блок
-«Избранные», откуда нужная модель выбирается одним кликом. Сами модели остаются
-на своих местах в группах провайдеров.
+English | [Русский](README.ru.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md)
 
-| Список моделей со звёздами | Блок «Избранные» |
+A plugin for the DeepSeek Harness web UI that adds stars to the built-in model
+picker: star any model, and a **Favourites** block appears in the selector's root
+menu, where that model is one click away. Models stay in their provider groups.
+
+| Model list with stars | The Favourites block |
 | --- | --- |
-| ![Список моделей со звёздами](docs/screenshots/model-list.png) | ![Блок «Избранные»](docs/screenshots/favourites-block.png) |
+| ![Model list with stars](docs/screenshots/model-list.png) | ![Favourites block](docs/screenshots/favourites-block.png) |
 
-## Возможности
+## Features
 
-- Звезда сразу после названия каждой модели в списке выбора.
-- Клик по звезде добавляет модель в избранное, повторный клик — убирает.
-- Блок «Избранные» в корневом меню селектора: продублированные модели с
-  названием провайдера, галочкой у текущей модели и звездой для удаления.
-- Клик по избранной модели переключает на неё и закрывает меню.
-- Избранное общее для всех сессий и переживает перезапуск DSH (хранится в
-  `localStorage` браузера).
-- Локализация на все штатные языки DSH: переключение языка в настройках
-  применяется сразу, без перезагрузки.
+- A star right after every model name in the model list.
+- Click the star to add a model to favourites; click it again to remove it.
+- A **Favourites** block in the selector's root menu: starred models with their
+  provider name, a check mark on the current model and a star to remove it.
+- Clicking a favourite switches to that model and closes the menu.
+- Favourites are shared across sessions and survive a DSH restart (stored in the
+  browser's `localStorage`).
+- Localized for every built-in DSH language; switching the language applies
+  immediately, without a reload.
 
-## Установка
+## Installation
 
-Требования: DeepSeek Harness `0.2.2-rc.3` или новее, веб-интерфейс (Desktop или
+Requirements: DeepSeek Harness `0.2.2-rc.3` or newer and the web UI (Desktop or
 `dsh --profile web`).
 
-### Вариант 1 — через Plugin Market (Discover)
+### Option 1 — Plugin Market (Discover)
 
-1. Откройте **Plugins → Discover**.
-2. Нажмите **Add index source** и добавьте URL индекса:
+1. Open **Plugins → Discover**.
+2. Click **Add index source** and add the index URL:
 
    ```text
    https://raw.githubusercontent.com/DewFill/dsh-favorite-models/main/index.json
    ```
 
-3. Найдите в списке **Избранные модели** (Favourite models) и нажмите
-   **Install** (потребуется подтверждение установки бандла).
+3. Find **Favourite models** in the list and click **Install** (confirm the
+   bundle installation).
 
-Обновления из этой установки приходят через тот же раздел Discover.
+Updates from this installation arrive through the same Discover tab.
 
-### Вариант 2 — из локальной папки
+### Option 2 — local directory
 
 ```bash
 git clone https://github.com/DewFill/dsh-favorite-models.git
 ```
 
-Откройте **Plugins → Installed → Add plugin** и выберите папку
-`dsh-favorite-models`. Плагин активируется сразу; если окно уже было открыто и
-звёзды не появились — перезагрузите страницу.
+Open **Plugins → Installed → Add plugin** and pick the `dsh-favorite-models`
+folder. The plugin activates immediately; if the window was already open and no
+stars appear, reload the page.
 
-## Использование
+## Usage
 
-1. Нажмите на название модели внизу поля ввода (например, «DeepSeek-V4.1-Flash»).
-2. В пункте **Модель** нажмите звёздочку после названия нужной модели — она
-   станет жёлтой.
-3. Откройте меню модели ещё раз: под строками **Модель** и **Рассуждения**
-   появится блок **Избранные**. Клик по строке переключает модель.
+1. Click the model name at the bottom of the composer (for example,
+   “DeepSeek-V4.1-Flash”).
+2. In the **Model** pane, click the star after the model you need — it turns
+   yellow.
+3. Open the model menu again: the **Favourites** block appears below the
+   **Model** and **Effort** rows. Click a row to switch to that model.
 
-## Языки
+## Languages
 
-Строки плагина и его карточка в Plugins локализованы для английского, русского,
-китайского, японского, испанского, французского, немецкого и португальского.
-Язык берётся из настроек DSH (**Settings → General → Language**) и применяется
-на лету. Для остальных языков используется английский текст.
+Plugin strings and its card in Plugins are localized for English, Russian,
+Chinese, Japanese, Spanish, French, German and Portuguese. The language comes
+from DSH settings (**Settings → General → Language**) and applies on the fly.
+Other languages fall back to English. This README is available in every
+supported language — see the links at the top.
 
-## Как это устроено
+## How it works
 
-Плагин не копирует и не заменяет интерфейс DSH — он использует два
-документированных слота штатного селектора модели
+The plugin does not copy or replace the DSH interface — it uses two documented
+slots of the shipped model selector
 ([`@deepseek-ai/dsh-client-ui-model-selection`](https://github.com/deepseek-ai/deepseek-harness)):
 
-- `conversation.input.model.label` — дописывает звезду к названию модели в каждой
-  строке списка;
-- `conversation.input.model.options` — добавляет блок «Избранные» в корневое
-  меню, рядом со строками других плагинов.
+- `conversation.input.model.label` — appends the star to the model name in every
+  list row;
+- `conversation.input.model.options` — adds the Favourites block to the root
+  menu, next to the rows contributed by other plugins.
 
-Поэтому обновления дизайна DSH не ломают плагин: в худшем случае перестанут
-отображаться только звезда и блок избранного.
+DSH design updates therefore do not break the plugin: in the worst case only the
+star and the favourites block stop rendering.
 
-## Ограничения
+## Limitations
 
-- Блок «Избранные» находится после строк **Модель** и **Рассуждения**: слот
-  позволяет добавлять пункты только туда. Отдельная группа в начале самого списка
-  моделей потребовала бы подменить штатный селектор целиком — от этого варианта
-  сознательно отказались.
-- Звезда отображается в строках списка моделей; в свёрнутом триггере композера и
-  в строке «Модель» её нет.
-- Избранное хранится в браузере (`localStorage`, ключ `dsh.favorite-models.v1`)
-  и не синхронизируется между браузерами и устройствами.
+- The Favourites block sits after the **Model** and **Effort** rows: the slot only
+  allows adding items there. A separate group at the very top of the model list
+  would require replacing the shipped selector entirely, which was deliberately
+  avoided.
+- The star appears in the model rows; the collapsed composer trigger and the
+  Model row have none.
+- Favourites live in the browser (`localStorage`, key
+  `dsh.favorite-models.v1`) and do not sync between browsers or devices.
 
-## Обновление и удаление
+## Updating and removing
 
-- **Обновление:** **Plugins → Discover** → карточка плагина → **Update** (для
-  установки из Git), либо повторите установку из папки после `git pull`.
-- **Удаление:** **Plugins → Installed** → удалить бандл. Избранное останется в
-  `localStorage` и вернётся, если установить плагин снова.
+- **Updating:** **Plugins → Discover** → the plugin card → **Update** (for
+  installations from Git), or repeat the folder installation after `git pull`.
+- **Removing:** **Plugins → Installed** → remove the bundle. Favourites stay in
+  `localStorage` and come back if you install the plugin again.
 
-## Разработка
+## Development
 
 ```
 .
-├── client.js          # браузерная половина: слоты, звезда, блок избранного
-├── index.js           # Host-половина (пустая: всё в Client)
-├── cordis.patch.yml   # строка бандла для профиля
-├── package.json       # манифест бандла и client-модуля
-├── index.json         # индекс Plugin Market для установки из GitHub
-├── locale/*.json      # название, описание и ссылка на docs/DETAIL.md
-├── docs/DETAIL.md     # подробное описание для страницы плагина
-├── docs/screenshots/  # скриншоты для README
-└── icon.svg           # иконка плагина
+├── client.js          # browser half: slots, stars, favourites block
+├── index.js           # host half (empty: everything lives in the client)
+├── cordis.patch.yml   # bundle row for the profile
+├── package.json       # bundle and client-module manifest
+├── index.json         # Plugin Market index for GitHub installs
+├── locale/*.json      # title, description and the docs/DETAIL.md link per language
+├── docs/DETAIL.md     # detailed plugin page description
+├── docs/screenshots/  # README screenshots
+└── icon.svg           # plugin icon
 ```
 
-Проверка синтаксиса и локальная установка:
+Syntax checks and local installation:
 
 ```bash
 node --check client.js
 node --check index.js
 ```
 
-Дальше — **Plugins → Installed → Add plugin** с путём к этой папке. Изменения в
-`client.js` подхватываются после перезагрузки страницы (или HMR, если запущен
-`pnpm run dev:web`).
+Then **Plugins → Installed → Add plugin** with this folder. Changes to
+`client.js` are picked up after a page reload (or through HMR when
+`pnpm run dev:web` is running).
 
-## English
+## License
 
-Favourite models for DeepSeek Harness: a star after every model name in the
-composer model menu, plus a **Favourites** block in the selector's root menu that
-duplicates the starred models and switches to them in one click. Models stay in
-their provider groups. Install it from the plugin index URL above or by adding
-this folder through **Plugins → Installed → Add plugin**. Localized for all
-built-in DSH languages.
-
-## Лицензия
-
-[MIT](LICENSE) © Артемий Федорченко
+[MIT](LICENSE) © Artemy Fedorchenko
