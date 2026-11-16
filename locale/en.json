@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Favourite models",
+    "description": "Star any model in the composer model menu and pick starred models from a Favourites block without leaving the list. Models stay in their provider groups.",
+    "detail": "docs/DETAIL.md"
+  }
+}

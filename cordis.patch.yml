@@ -1,0 +1,4 @@
+# The Client half owns every visible part of the feature; the Host row only carries the bundle.
+- insert:
+    - id: dsh-favorite-models
+      name: 'dsh-favorite-models'

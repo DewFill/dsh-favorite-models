@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Favoriten",
+    "description": "Jedes Modell im Modellmenü mit einem Stern markieren und markierte Modelle im Favoritenblock auswählen. Die Modelle bleiben in ihren Anbietergruppen.",
+    "detail": "docs/DETAIL.md"
+  }
+}

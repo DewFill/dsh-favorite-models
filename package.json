@@ -1,0 +1,58 @@
+{
+  "name": "dsh-favorite-models",
+  "version": "1.0.0",
+  "description": "Star models in the DeepSeek Harness composer model menu and pick them from a Favourites block.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "models",
+    "favorites",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": "Artemy Fedorchenko",
+  "homepage": "https://github.com/DewFill/dsh-favorite-models",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DewFill/dsh-favorite-models.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DewFill/dsh-favorite-models/issues"
+  },
+  "private": false,
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.2-rc.3"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection"
+      ]
+    }
+  }
+}
